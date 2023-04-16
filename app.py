@@ -13,7 +13,7 @@ locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = os.urandom(16).hex()
-app.config["MONGO_URI"] = "mongodb+srv://ywei004:KGnwKTyAoJF9Y7OT@Cluster0.6nx458r.mongodb.net/?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = "mongodb+srv://<username>:<password>@Cluster0.6nx458r.mongodb.net/?retryWrites=true&w=majority"
 mongo = PyMongo(app).cx['db']
 #client = MongoClient(app.config["MONGO_URI"])
 #db = client["db"]
