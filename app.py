@@ -95,7 +95,8 @@ with app.app_context():
 @app.route('/')
 def index():
     # loads things into session so we don't need to read stuff over and over again
-    exchange_rates = currency_exchange_rates()
+    api_key = ""
+    exchange_rates = currency_exchange_rates(api_key)
     session["exchange_rates"] = exchange_rates
 
     my_expenses = mongo.expenses.find()
